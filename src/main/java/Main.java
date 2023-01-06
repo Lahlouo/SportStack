@@ -30,7 +30,7 @@ public class Main {
         players = gson.fromJson(getPlayersResponse.body(),Players.class);
         Player p = players.getData()[0];
         System.out.println(p.getLast_name());
-        return null;
+        return players;
     }
 
     public static Teams getTeams() throws Exception{
@@ -75,6 +75,6 @@ public class Main {
         Game g = schedule[0];
         System.out.println(g.getHome_team_score());
 
-        return null;
+        return t;
     }
 }
